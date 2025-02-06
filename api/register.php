@@ -119,7 +119,7 @@ try {
     
         $mail->isHTML(true);
         $mail->Subject = 'Verify Your Email Address';
-        $verificationLink = "http://192.168.100.98/memorymapv2/api/verify-email.php?token=$verificationToken"; // Update with your actual domain
+        $verificationLink = "http://192.168.33.149/memorymap/api/verify-email.php?token=$verificationToken"; // Update with your actual domain
         $mail->Body = "
             <!DOCTYPE html><html><head>...</head><body>
             <div class='container'>
