@@ -15,7 +15,9 @@ require_once '../config.php';
         <input type="email" name="email" id="tEmail" required>
         <label for="tPassword">Password</label>
         <input type="password" name="password" id="tPassword" required>
-        <button type="submit">Login</button>  </form>
+        <button type="submit">Login</button>
+        <a href="forgot_password.php">Forgot password?</a>
+    </form>
 
     <script>
         const form = document.getElementById('loginForm');
@@ -60,7 +62,7 @@ require_once '../config.php';
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert("An error occurred during login: " + error.message); // Display error message to the user
+                alert(error.message); // Display error message to the user
             });
         });
     </script>
