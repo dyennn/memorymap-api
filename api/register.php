@@ -68,7 +68,7 @@ $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 if ($conn->connect_error) {
     http_response_code(500);
     echo json_encode(['status' => 'Failed', 'message' => 'Database connection failed']);
-    exit;
+    exit();
 }
 
 try {
@@ -119,7 +119,7 @@ try {
     
         $mail->isHTML(true);
         $mail->Subject = 'Verify Your Email Address';
-        $verificationLink = "http://192.168.33.149/memorymap/api/verify-email.php?token=$verificationToken"; // Update with your actual domain
+        $verificationLink = $_ENV['APP_URL'] . "/memorymap/api/verify-email.php?token=$verificationToken"; // Use configuration variable for the domain
         $mail->Body = "
             <!DOCTYPE html><html><head>...</head><body>
             <div class='container'>
@@ -152,7 +152,7 @@ try {
     http_response_code(500);
     echo json_encode(['status' => 'Failed', 'message' => "Email sending failed: {$mail->ErrorInfo}"]); // More specific error message
 } finally {
-    if (isset($conn)) {
+    if (isset($conn) && $conn instanceof mysqli) {
         $conn->close();
     }
 }
