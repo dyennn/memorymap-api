@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif; /* Use a generic sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+nav .logo {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items to the center */
+}
+nav li {
+    margin-left: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: 500; /* Medium */
+    font-family: 'Montserrat', sans-serif;
+}
+.settings {
+    position: relative;
+}
+.settings .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.settings .dropdown.show {
+    display: block;
+}

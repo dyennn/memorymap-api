@@ -7,6 +7,7 @@ require_once '../config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -18,6 +19,9 @@ require_once '../config.php';
             window.location.href = 'login.php';
         }
     </script>
+    <?php
+    include 'components/navigation.php';
+    ?>
         <h1>Dashboard</h1>
 </body>
 </html>
