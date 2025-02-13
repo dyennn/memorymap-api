@@ -7,21 +7,35 @@ require_once '../config.php'; // Database credentials
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login-register.css">
     <title>Document</title>
 </head>
 <body>
     
-    <form id="registerForm">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" name="confirmPassword" id="confirmPassword" required>
-        <button type="submit">Register</button>
-    </form>
+    
+<div class="logo-container">
+        <img src="Group 226.png">
+        <p class="MemoryMap"> MemoryMap</p>
+
+        <div class="form-container">
+
+        <h4>Create account</h4>
+
+        <form id="registerForm">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" required style="width: 100%"><br>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" required style="width: 100%"><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password" required style="width: 100%"><br>
+            <label for="confirmPassword">Confirm Password</label><br>
+            <input type="password" name="confirmPassword" id="confirmPassword" required style="width: 100%"><br>
+            
+            <button type="submit">Register</button>
+            <p id="goTologin" onclick="location.href='http://localhost/memorymap/views/login.php'">Go to Login</p>
+        </form>
+    </div>
+    </div>
     <script>
         document.getElementById('registerForm').addEventListener('submit', async function(event) {
             event.preventDefault();
