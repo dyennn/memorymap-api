@@ -83,11 +83,21 @@
     </style>
 </head>
 <body>
-
+    <script>
+        // Check if token exists in local storage
+        const token = localStorage.getItem('token');
+        if (!token) {
+            // Redirect to login page if token is not found
+            
+            window.location.href = 'login.php';
+        }
+    </script>
     <?php
     include 'components/navigation.php';
     ?>
-
+    <script>
+        document.querySelector('a[href="patient.php"]').classList.add('active');
+    </script>
     <div class="container">
         <div class="main-content">
             <div class="left-panel">

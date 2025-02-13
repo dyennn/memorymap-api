@@ -6,8 +6,8 @@ body {
 }
 
 nav {
-    background-color: #fff;
-    padding: 10px;
+    background-color: #824C76;
+    padding: 10px 50px 10px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,8 +15,9 @@ nav {
 }
 nav .logo {
     font-weight: bold;
-    font-size: 50px;
+    font-size:42px;
     font-family: 'Montserrat', sans-serif;
+    color: #fff ;
 }
 nav ul {
     list-style: none;
@@ -30,13 +31,13 @@ nav li {
 }
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 24px;
     font-weight: 500; /* Medium */
     font-family: 'Montserrat', sans-serif;
 }
-nav a.active {
-    border-bottom: 2px solid black;
+nav li a.active {
+    border-bottom: 2px solid #fff;
     padding-bottom: 5px;
 }
 .settings {
