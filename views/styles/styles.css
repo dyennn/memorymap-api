@@ -1,8 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 body {
-    font-family: sans-serif; /* Use a generic sans-serif font */
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
+    overflow: hidden;
+    background-color: #FFF7F9;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh; /* Use full viewport height */
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #824C76;
+}
+
+.logo-container h1 {
+    font-weight: bold;
+    font-size: 42px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container {
+    width: 473px;
+    height: 538px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add left and right padding */
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+.form-container h1 {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 0px;
 }
 
 nav {
@@ -105,4 +155,143 @@ nav li a.active {
         margin: 10px 0;
         text-align: center;
     }
+}
+
+
+.form-container p {
+    font-size: 16px;
+    color: #797979;
+    padding-bottom: 30px;
+    width: 354px;
+}
+
+.input-container {
+    width: 100%; /* Make the container full width */
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    font-size: 20px;
+    display: block;
+    text-align: left;
+    padding-bottom: 5px;
+    color: black;
+}
+
+.input-button-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-button-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #824C76;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 107px;
+    height: 44px;
+    background-color: #824C76;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+.input-button-group button span {
+    display: inline-block;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #824C76;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px; /* Add margin to the left of the spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#resendCodeButton {
+    background: none;
+    border: none;
+    color: #824C76;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: left;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#resendCodeButton:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.back-to-login {
+    margin-top: 40px;
+    width: 319px;
+    height: 59px;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 19px;
+    background-color: #6F5867;
+    color: white;
+}
+
+button:hover {
+    background-color: #6B3E5B;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.input-button-group button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Toast Container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+.to-register-login {
+    font-size: 16px;
+    font-weight: medium;
+    color: #6F5867;
+    padding: 10px !important; /* Add padding */
+    margin: 10px !important; 
+}
+
+.to-forgot-password {
+    font-size: 16px;
+    font-weight: medium;
+    color: #6F5867;
 }

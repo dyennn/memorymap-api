@@ -2,7 +2,6 @@
 // navigation.php?>
 
 <nav>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles/styles.css">
     <div class="logo">MemoryMap</div>
     <div class="burger" id="burger">
