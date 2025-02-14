@@ -26,11 +26,14 @@ require_once '../config.php';
                 <div class="input-container">
                     <label for="tEmail">Email</label>
                     <div class="input-button-group">
-                        <input type="email" name="email" id="tEmail" required>
+                        <input type="email" name="email" id="tEmail" placeholder="Ex. example@email.com" required>
                     </div>
                     <label for="tPassword">Password</label>
                     <div class="input-button-group">
-                        <input type="password" name="password" id="tPassword" required>
+                        <input type="password" name="password" id="tPassword" placeholder="Enter your password..." required>
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility('tPassword')">
+                            <img src="../res/show.svg" alt="Show" id="togglePasswordIcon_tPassword">
+                        </button>
                     </div>
                     <a href="forgot_password.php" class="to-forgot-password" style="float: left;">Forgot Password?</a>
                 </div>
@@ -67,6 +70,20 @@ require_once '../config.php';
         setTimeout(() => {
             toast.remove();
         }, 3000);
+    }
+
+    function togglePasswordVisibility(id) {
+        const input = document.getElementById(id);
+        const icon = document.getElementById(`togglePasswordIcon_${id}`);
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.src = '../res/hide.svg';
+            icon.alt = 'Hide';
+        } else {
+            input.type = 'password';
+            icon.src = '../res/show.svg';
+            icon.alt = 'Show';
+        }
     }
 
     form.addEventListener('submit', (event) => {

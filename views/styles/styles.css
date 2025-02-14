@@ -175,6 +175,7 @@ nav li a.active {
     display: block;
     text-align: left;
     padding-bottom: 5px;
+    padding-top: 10px;
     color: black;
 }
 
@@ -188,14 +189,12 @@ nav li a.active {
     padding: 10px;
     border: 1px solid #824C76;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
-button {
+.input-button-group button {
     width: 107px;
-    height: 44px;
+    height: 37.6px;
     background-color: #824C76;
     color: white;
     border: none;
@@ -272,6 +271,7 @@ button:disabled {
     z-index: 1000;
 }
 
+
 .toast {
     background-color: #333;
     color: #fff;
@@ -291,7 +291,23 @@ button:disabled {
 }
 
 .to-forgot-password {
-    font-size: 16px;
+    padding-top: 5px;
+    font-size: 12px;
     font-weight: medium;
     color: #6F5867;
+}
+
+.toggle-password {
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    width: 30px !important;
+}
+
+
+.toggle-password img {
+    width: 20px;
+    height: 20px;
 }
